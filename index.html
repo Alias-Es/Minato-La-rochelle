@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <title>Minato</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
    
 
@@ -25,8 +26,7 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
+    
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
 </head>
@@ -212,10 +212,10 @@
     <!-- About End -->
 
 
-  
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
 
-
-    <!-- Reservation Start -->
+<!--  debut resa -->
+   
     <div class="container-fluid my-5"> 
         <div class="container">
             <div class="reservation position-relative overlay-top overlay-bottom">
@@ -239,47 +239,63 @@
                     <div class="col-lg-6">
                         <div class="text-center p-5" style="background: rgba(244, 74, 36, 0.8);">
                             <h1 class="text-white mb-4 mt-5">RÉSÉRVATION</h1>
-                            <form class="mb-5">
+                            <form class="mb-5" method="POST" action="reservation.php">
                                 <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Nom"
-                                        required="required" />
-                                </div>
-                               
-                                <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
-                                    </div>
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" name="nom" placeholder="Nom" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Heure" data-target="#time" data-toggle="datetimepicker"/>
-                                    </div>
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" id="date-picker" name="date" placeholder="Date" required />
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
-                                        <option selected>Nombre de personnes</option>
-                                        <option value="1">Person 1</option>
-                                        <option value="2">Person 2</option>
-                                        <option value="3">Person 3</option>
-                                        <option value="3">Person 4</option>
-                                        <option value="3">Person 5</option>
-                                        <option value="3">Person 6</option>
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" id="time-picker" name="heure" placeholder="Heure" required />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select bg-transparent border-primary px-4" name="nombre_personnes" style="height: 49px;" required>
+                                        <option value="" disabled selected>Nombre de personnes</option>
+                                        <option value="1"> 1 Personne </option>
+                                        <option value="2"> 2 Personnes </option>
+                                        <option value="3"> 3 Personnes</option>
+                                        <option value="4"> 4 Personnes</option>
+                                        <option value="5"> 5 Personnes</option>
+                                        <option value="6"> 6 Personnes</option>
+                                        <option value="7"> 7 Personnes</option>
+                                        <option value="8"> 8 Personnes</option>
+                                        <option value="9"> 9 Personnes</option>
                                     </select>
                                 </div>
-                                
                                 <div>
                                     <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Réserver</button>
                                 </div>
                             </form>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Reservation End -->
+   <!-- Reservation End --> 
 
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+   
+   <script>
+    // Initialiser Flatpickr sur l'élément avec l'ID 'date-picker'
 
+flatpickr("#date-picker", {
+    locale: "fr",  // Définir la locale en français
+    dateFormat: "d-m-Y", // Format de la date
+    defaultDate: new Date(), // Date par défaut (aujourd'hui)
+    minDate: "today", // Date minimale (aujourd'hui)
+});
+
+flatpickr("#time-picker", {
+        enableTime: true,  // Activer la sélection de l'heure
+        noCalendar: true,  // Désactiver le calendrier, garder uniquement l'heure
+        dateFormat: "H:i",  // Format de l'heure
+        time_24hr: true,  // Utiliser le format 24 heures
+    });
+</script>
 
 
     <!-- Footer Start -->
@@ -337,16 +353,25 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+   
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
+    
+    <!-- Flatpickr JS -->
+    
+
+    <!-- Flatpickr French Locale -->
+    
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+   
+
+
+
+
 </body>
 
 </html>
