@@ -25,8 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fclose($handle);
 
     // Message de confirmation
-    echo "Réservation enregistrée avec succès !";
-} else {
+    header("Location: index.html");
+    exit();
+} else { echo "Réservation enregistrée avec succès !";
     // Si le formulaire n'a pas été soumis, rediriger vers la page du formulaire
     header("Location: index.html");
     exit();
