@@ -10,7 +10,7 @@ Le site n'a pas pu être développé davantage par manque de temps, mais j'avais
 
   <img src="img/readme.jpg" alt="" width="500"/>  <img src="img/readme2.jpg" alt="" width="500"/>
 
-  <div align="center"> <img src="img/readme1.jpg" alt="" width="200"/> </div>
+  <div align="center"> <img src="img/Image 13-03-2025 à 14.37.jpg" alt="" width="500"/> </div>
 
 
 ## 🌟 Fonctionnalités principales
