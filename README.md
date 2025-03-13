@@ -8,7 +8,10 @@ Le site n'a pas pu être développé davantage par manque de temps, mais j'avais
 ## 🖼️ Aperçu de l'application
 
 
-  <img src="img/readme.jpg" alt="" width="500"/> <img src="img/readme1.jpg" alt="" width="500"/> <img src="img/readme2.jpg" alt="" width="500"/>
+  <img src="img/readme.jpg" alt="" width="500"/>  <img src="img/readme2.jpg" alt="" width="500"/>
+
+  <div align="center"> <img src="img/readme1.jpg" alt="" width="200"/> </div>
+
 
 ## 🌟 Fonctionnalités principales
 - **Page d'accueil immersive** avec une présentation du restaurant
